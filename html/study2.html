@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 아코디언</title>
+    <!--jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!--fontawesome-->
+    <script src="https://kit.fontawesome.com/0695eff491.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style2.css">
+    <style>
+        .answer {
+            display: none;
+        }
+    </style>
+    <script>
+        $(function(){
+            $('.question').click(function(){
+                $(this).next().slideToggle(400).siblings('.answer').slideUp(300);
+                $('img').each(function(idx, ele){
+                    $(ele).css('transform', 'rotate(0deg)');
+                })
+                $(this).find('img').css('transform', 'rotate(180deg)');
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="qna_list">
+        <div class="question">
+            <h3><span class="question_q">Q</span>타이틀입니다타이틀입니다타이틀입니다</h3>
+            <span class="r_btn"><img src="img/circle.svg" alt="circle_SVG" /></span>
+        </div>
+        <div class="answer">
+            <span class="answer_a">A</span>
+            <p>
+                안녕하십니까. 현행 개인정보취급방침을 아래와 같이 개정하여 공지합니다. 회원 여러분께서는 변경 내용을 꼭 확인하시고 서비스 이용에 차질이 없으시기 바랍니다.
+            </p>    
+        </div>
+        <div class="question">
+            <h3><span class="question_q">Q</span>타이틀입니다타이틀입니다타이틀입니다타이틀입니다타이틀입니다타이틀입니다타이틀입니다타이틀입니다타이틀입니다타이틀입니다타이틀입니다타이틀입니다</h3>
+            <span class="r_btn"><img src="img/circle.svg" alt="circle_SVG" /></span>
+        </div>
+        <div class="answer">
+            <span class="answer_a">A</span>
+            <p>
+                안녕하십니까. 현행 개인정보취급방침을 아래와 같이 개정하여 공지합니다. 회원 여러분께서는 변경 내용을 꼭 확인하시고 서비스 이용에 차질이 없으시기 바랍니다.
+            </p>    
+        </div>
+    </div>
+</body>
+</html>
