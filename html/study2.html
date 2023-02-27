@@ -10,19 +10,20 @@
     <!--fontawesome-->
     <script src="https://kit.fontawesome.com/0695eff491.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style2.css">
-    <style>
-        .answer {
-            display: none;
-        }
-    </style>
     <script>
         $(function(){
             $('.question').click(function(){
-                $(this).next().slideToggle(400).siblings('.answer').slideUp(300);
-                $('img').each(function(idx, ele){
-                    $(ele).css('transform', 'rotate(0deg)');
-                })
-                $(this).find('img').css('transform', 'rotate(180deg)');
+                //만약 열려있다면 닫아주기
+                if($(this).next().is(':visible')){
+                    $(this).next().slideUp(300);
+                    $(this).find('img').css('transform', 'rotate(0deg)');
+                } else {
+                    $(this).next().slideDown(400).siblings('.answer').slideUp(300);
+                    $('img').each(function(idx, ele){
+                        $(ele).css('transform', 'rotate(0deg)');
+                    })
+                    $(this).find('img').css('transform', 'rotate(180deg)');
+                }
             })
         })
     </script>

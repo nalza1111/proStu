@@ -3,26 +3,62 @@ body {
     padding: 30px;
     
 }
+
+/* 아이폰 SE */
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 374px) {
+
+}
+
+/* 스마트폰 모바일(세로) */
+
+@media screen and (max-width : 480px) {
+    .qna_list {
+        width: 90%;
+    }
+}
+
+/* 태블릿, 아이패드 */
+
+@media screen and (min-width : 481px) and (max-width : 1024px) {
+    .qna_list {
+        width: 90%;
+    }
+}
+
+/* 랩탑 */
+
+@media screen and (min-width : 1025px) {
+    .qna_list {
+        width: 90%;
+    }
+}
+
 .qna_list {
     margin: 0 auto;
-    width: 90%;
     border: 1px solid #e6e6e6;
 }
+
 .question {
     padding: 20px;
 }
+
 .question:hover {
     cursor: pointer;
     background-color: rgb(241, 241, 240);
 }
+
 .answer {
     padding: 20px 40px;
     background-color: rgba(240, 223, 223, 0.733);
     color: rgb(95, 95, 95);
+    display: none;
 }
+
 .answer:hover {
     cursor: default;
 }
+
 .question_q {
     margin-right: 10px;
     padding: 3px;
@@ -35,6 +71,7 @@ body {
     text-align: center;
     line-height: 21px;
 }
+
 .answer_a {
     margin: 0 auto;
     padding: 3px;
@@ -48,13 +85,16 @@ body {
     text-align: center;
     line-height: 23px;
 }
+
 h3 {
     display: inline-block;
     width: calc(97% - 50px);
 }
+
 .r_btn{
     float: right;
 }
+
 img {
     margin-top: 10px;
 }
