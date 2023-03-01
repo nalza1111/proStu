@@ -1,0 +1,15 @@
+//쿠키 저장
+Cookie cookie = new Cookie("c", String.valueOf(result));
+response.addCookie(cookie);
+
+//쿠키 읽기
+Cookie[] cookie = request.getCookies();
+String _c = "";
+
+if (cookies != null){
+    for(Cookie cookie : cookies)
+    if("c".equals(cookie.getName())){
+        _c = cookie.getValue();
+        break;
+    }
+}
