@@ -1,0 +1,41 @@
+@media screen and (max-width: 1008px){
+    .bg {
+        background: url(../img/i.png);
+        background-repeat: no-repeat;
+        background-size: 500%;
+        background-position: center;
+    }
+    .wrap {
+        width: 100%;
+    }
+    .title {
+        height: 562px;
+        width: 100%;
+        display: inline-block;
+        background-color: rgba(199, 107, 107, 0.5);
+    
+    }
+}
+@media not (max-width: 1008px){
+    .bg {
+        background: url(../img/i.png);
+        background-repeat: no-repeat;
+        background-size: 150%;
+        background-position: center;
+    }
+    .title {
+        height: 562px;
+        width: 1008px;
+        display: inline-block;
+        background-color: rgba(199, 107, 107, 0.5);
+    
+    }
+    .wrap {
+        width: 1088px;
+    }
+}
+
+* {
+    margin: 0px auto;
+}
+
